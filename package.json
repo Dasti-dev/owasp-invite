@@ -1,0 +1,33 @@
+{
+  "name": "hacker-orientation-invite",
+  "version": "1.0.0",
+  "description": "A mocked terminal UI for USC Hacker's Hacker Orientation",
+  "scripts": {
+    "build": "browserify -t browserify-nodent main.js -o public/main.js",
+    "build:dev": "watchify -t browserify-nodent main.js -o public/main.js",
+    "build:clean": "rm public/main.js || true",
+    "lint": "standard app.js main.js src",
+    "lint:fix": "standard --fix app.js main.js src",
+    "start": "node app.js",
+    "start:dev": "node app.js",
+    "engines": {
+      "node": "14.x"
+    }
+  },
+  "author": "Brian Anglin <banglin@usc.edu> and Suvir Copparam <scoppara@usc.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.0",
+    "browserify": "^14.4.0",
+    "browserify-nodent": "^1.0.22",
+    "csv-write-stream": "^2.0.0",
+    "express": "^4.15.4",
+    "forever": "^0.15.3",
+    "terminal.js": "^1.0.3"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3",
+    "nodemon": "^1.12.0",
+    "watchify": "^3.9.0"
+  }
+}
